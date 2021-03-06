@@ -6,7 +6,10 @@ class Singleton:
 
     @staticmethod
     def get_instance():
-        pass
+        if Singleton.__instance == None:
+            Singleton()
+
+        return Singleton.__instance
 
     def __init__(self):
         if Singleton.__instance != None:
